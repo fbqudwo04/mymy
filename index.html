@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI 계산기</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="calculator-container">
+    <h1>BMI 계산기</h1>
+
+    <div class="input-group">
+      <label for="height">키(cm)</label>
+      <input type="text" id="height" placeholder="예:170">
+    </div>
+
+    <div class="input-group">
+      <label for="weight">몸무게(kg)</label>
+      <input type="text" id="weight" placeholder="예:70">
+    </div>
+
+    <button onclick="calculateBMI()">계산하기</button>
+
+    <div class="result-container">
+      <h2 id="result"></h2>
+      <h3 id="state"></h3>
+    </div>
+
+    <div class="bmi-bar-wrap">
+      <div class="bmi-pointer" id="bmiPointer"></div>
+
+      <div class="bmi-bar">
+        <div class="bmi-segment under">저체중</div>
+        <div class="bmi-segment normal">정상</div>
+        <div class="bmi-segment over">과체중</div>
+        <div class="bmi-segment obese">비만</div>
+      </div>
+
+      <div class="bmi-scale">
+        <span></span>
+        <span>18.5</span>
+        <span>23</span>
+        <span>25</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
